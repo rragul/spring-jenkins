@@ -1,3 +1,3 @@
-FROM openjdk:17
+FROM openjdk:18
 ADD target/devops-integration.jar devops-integration.jar
 ENTRYPOINT ["java","-jar","/devops-integration.jar"]
