@@ -1,3 +1,3 @@
-FROM openjdk:18
-ADD target/devops-integration.jar devops-integration.jar
-ENTRYPOINT ["java","-jar","/devops-integration.jar"]
+FROM openjdk:11
+ADD target/spring-jenkins-0.0.1-SNAPSHOT.jar spring-jenkins-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","/spring-jenkins-0.0.1-SNAPSHOT.jar"]
