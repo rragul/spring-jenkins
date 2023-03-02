@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment # Kubernetes resource kind we are creating
 metadata:
-  name: spring-jenkins
+  name: spring-jenkins-deploy
 spec:
   selector:
     matchLabels:
@@ -26,7 +26,7 @@ spec:
 apiVersion: v1 # Kubernetes API version
 kind: Service # Kubernetes resource kind we are creating
 metadata: # Metadata of the resource kind we are creating
-  name: spring-jenkins
+  name: spring-jenkins-k8s
 spec:
   selector:
     app: spring-jenkins
