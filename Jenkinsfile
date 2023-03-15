@@ -14,6 +14,7 @@ pipeline {
             steps{
                 script{
                      sh 'docker build -t ragul05/devops-integration:v$BUILD_ID .'
+                     sh 'docker build -t ragul05/devops-integration:latest .'
                  }
             }
         }
