@@ -13,7 +13,7 @@ pipeline {
         stage('Build Image'){
             steps{
                 script{
-                     sh 'docker build -t ragul05/devops-integration:v$BUILD_ID .'
+                     sh 'docker build -t ragul05/devops-integration:v1.$BUILD_ID .'
                      sh 'docker build -t ragul05/devops-integration:latest .'
                  }
             }
@@ -25,7 +25,8 @@ pipeline {
                     sh 'docker login -u ragul05 -p ${dockerhubpwd}'
 
                     }
-                    sh 'docker push ragul05/devops-integration'
+                    sh 'docker push ragul05/devops-integration:v1.$BUILD_ID'
+                    sh 'docker push ragul05/devops-integration:latest'
                  }
              }
         }
