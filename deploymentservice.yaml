@@ -31,7 +31,6 @@ spec:
   selector:
     app: spring-jenkins
   ports:
-    - protocol: "TCP"
       port: 80 # The port that the service is running on in the cluster
       targetPort: 8090 # The port exposed by the service
   type: LoadBalancer # type of the service.
