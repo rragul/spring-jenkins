@@ -11,7 +11,7 @@ public class SpringJenkinsApplication {
 
     @GetMapping("/")
     public String displayMessage(){
-        return "Jenkins demo";
+        return "Jenkins demo whith spring boot";
     }
     public static void main(String[] args) {
         SpringApplication.run(SpringJenkinsApplication.class, args);
